@@ -10,22 +10,6 @@
     <div id="root">not rendered</div> <!-- if you see this, then the react app didn't render -->
     <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script> <!-- this makes react universal availabile -->
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script> <!-- react is the api part of the library and react dom renders it to the DOM (needed to spit up react native, react 360, etc)-->
-    <script>
-        const App = () => {
-            return React.createElement(
-                "div", // what kid of element we're putting in 
-                {}, // attributes
-                React.createElement( //content
-                    "h1", // what kid of element we're putting in 
-                    {}, // attributes
-                    "Adopt Me!" // content
-                )
-            )
-        };
-
-        const container = document.getElementById('root');
-        const root = ReactDOM.createRoot(container);
-        root.render(React.createElement(App));
-    </script>
+    <script src="./App.js"></script>
 </body>
 </html>
