@@ -1,10 +1,24 @@
-const Pet = (props) => {
+import { Link } from 'react-router-dom';
+// use Link instead of a tag in SPAs, but note anytime you use a Link tag it has to be within a BrowserRouter component
+
+const Pet = ({ name, animal, breed, images, location, id }) => {
+    let hero = "http://pet-images.dev-apis.com/pets/none.jpg";
+
+    if (images.length) {
+        hero = images[0];
+    }
+
   return (
-    <div>
-      <h1>{props.name}</h1>
-      <h2>{props.animal}</h2>
-      <h2>{props.breed}</h2>
-    </div>
+      <Link to={`/details/${id}`} className="pet">
+          <div className="image-container">
+              <img src={hero} alt={name} />
+          </div>
+          <div className="info">
+              <h1>{name}</h1>
+              <h2>{animal} - {breed} - {location}</h2>
+          </div>
+      </Link>
+      
   );
 };
 
