@@ -13,15 +13,15 @@
   },
   "plugins": ["react", "import", "jsx-a11y"],
   "parserOptions": {
-    "ecmaVersion": 2022, // we are using the latest version of js at this time
+    "ecmaVersion": 2022,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "env": {
-    "es6": true, // allow things like weak maps, weak sets
-    "browser": true, // allow things like window and fetch
+    "es6": true,
+    "browser": true,
     "node": true
   },
   "settings": {
